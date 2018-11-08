@@ -6,20 +6,21 @@ namespace IteratorDesign
     {
         static void Main()
         {
-            ConcreteAggregate a = new ConcreteAggregate();
-            a[0] = "Item A";
-            a[1] = "Item B";
-            a[2] = "Item C";
-            a[3] = "Item D";
+            ConcreteAggregate objects = new ConcreteAggregate();
+            objects[0] = "First Item";
+            objects[1] = "Second Item";
+            objects[2] = "Third Item";
+            objects[3] = "Fourth Item";
 
             // Create Iterator and provide aggregate
-            Iterator i = a.CreateIterator();
+            Iterator iterativeObj = objects.CreateIterator();
             Console.WriteLine("Iterating over collection:");
-            object item = i.First();
+            object item = iterativeObj.First();
             while (item != null)
             {
                 Console.WriteLine(item);
-                item = i.Next();
+                item = iterativeObj.Next();
+
             }
 
             // Wait for user
